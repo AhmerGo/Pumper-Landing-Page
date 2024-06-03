@@ -109,58 +109,6 @@ export default function Home() {
       </section>
 
       {/* Pricing */}
-
-      <section className="border-b dark border-border bg-background">
-        <div className="container mx-auto text-center">
-          <div className="py-14">
-            <h2 className="text-4xl font-extrabold my-4 text-foreground">
-              Pricing Plans
-            </h2>
-
-            <p className="mx-auto my-4 text-sm w-full max-w-md bg-transparent text-center font-medium leading-relaxed tracking-wide text-muted-foreground">
-              Choose a plan that works best for you. You can always upgrade or
-              downgrade your plan later.
-            </p>
-            <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
-              {pricing.map((plan) => (
-                <Card
-                  key={plan.title}
-                  className="w-full mx-auto max-w-xl text-left relative"
-                >
-                  {plan.fancy && (
-                    <Badge className="absolute top-4 right-4">Popular</Badge>
-                  )}
-                  <CardHeader>
-                    <CardTitle className="text-2xl">{plan.title}</CardTitle>
-                    <CardDescription className="mt-4">
-                      {plan.description}
-                    </CardDescription>
-                    <h5 className="text-2xl font-bold">{plan.price}</h5>
-                  </CardHeader>
-                  <CardContent>
-                    <Button
-                      className="w-full"
-                      variant={plan.fancy ? "default" : "secondary"}
-                    >
-                      Get Started
-                    </Button>
-                  </CardContent>
-                  <CardFooter>
-                    <ul className="mt-4">
-                      {plan.features.map((feature) => (
-                        <li key={feature} className="flex items-center gap-2">
-                          <CircleCheck className="w-4 h-4 text-green-500" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                  </CardFooter>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
     </>
   );
 }
